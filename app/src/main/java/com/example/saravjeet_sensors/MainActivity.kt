@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             var layoutParams : ConstraintLayout.LayoutParams = textView.layoutParams as ConstraintLayout.LayoutParams
 
             val horizontalBias = (result[0] + 90) / 180
-            val verticalBias = (result[1] + 90) / 180
+            val verticalBias = (90 - result[1] ) / 180
             Log.i("value of bial", "$horizontalBias,,,,,$verticalBias")
 
             layoutParams.horizontalBias = horizontalBias
